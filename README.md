@@ -37,7 +37,9 @@ Una vez cargada las migraciónes iniciamos el servidor con el siguiente comando
 python manage.py runserver
 ```
 
-Ingresamos desde el navegador a la url [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin). La primera vista que aparecera sera para agregar un nuevo usuario. Rellenamos el formulario y nos redimenciona a otra vista donde veremos todos los usuarios hasta el momento, en dicha vista  podemos buscar, actualizar y eliminar usuarios. Las busquedas de usuarios son filtradas netamente por el correo electrónico.
+Ingresamos desde el navegador a la url [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin). 
+
+La primera vista que aparecera sera para agregar un nuevo usuario. Rellenamos el formulario y nos redimenciona a otra vista donde veremos todos los usuarios hasta el momento, en dicha vista  podemos buscar, actualizar y eliminar usuarios. Las busquedas de usuarios son filtradas netamente por el correo electrónico.
 
 ## Panel de Administrador de usuario
 
