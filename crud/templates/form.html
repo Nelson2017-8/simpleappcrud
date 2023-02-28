@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row justify-content-md-center m-5">
+        <div class="col-8">
+            <div class="card shadow">
+                <div class="card-body p-5">
+                    <h3 class="card-title text-center mb-2" id="title-form">Agregar Usuario</h3>
+                    <p class="text mb-4 text-center">
+                        Por favor rellene el siguiente formulario para agregar un nuevo usuario.
+                    </p>
+                    <div class="errors d-none">
+                        <p>
+                            <b>Por favor, corrija el(los) siguiente(s) error(es):</b>
+                        </p>
+                        <ul> </ul>
+                    </div>
+
+                    <form method="post" class="row g-3" id="form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        {% for input in formulario %}
+                            
+                            {% if input.name == 'birthdate' %}
+                                <div class="col-12 mb-3">
+                                    <label for="{{ input.name }}" class="form-label">{{ input.label }}</label>
+                                    <input type="{{ input.field.widget.input_type }}" class="form-control" name="{{ input.name }}" id="{{ input.name }}" value="{{ input.value|date:"Y-m-d" }}" placeholder="">
+                                </div>
+                                <div class="col-12 help-text">{{ input.errors }}</div>
+                            {% else %}
+                                <div class="col-12 mb-3">
+                                    <label for="{{ input.name }}" class="form-label">{{ input.label }}</label>
+                                    <input type="{{ input.field.widget.input_type }}" class="form-control" name="{{ input.name }}" id="{{ input.name }}" value="{{ input.value | default:'' }}" placeholder="">
+                                </div>
+                                <div class="col-12 help-text">{{ input.errors }}</div>
+                            {% endif %}
+                        {% endfor %}
+                        <div class="col-12 mb-3">
+                            <div class="avatar img-fluid img-circle" style="margin-top: 10px;">
+                                <img src="" id="preview" width="100">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary mb-3" id="btn-form">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="" class="rounded me-2" alt="">
+                <strong class="me-auto"></strong>
+                <small></small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerca"></button>
+            </div>
+            <div class="toast-body"></div>
+        </div>
+    </div>
+</div>
