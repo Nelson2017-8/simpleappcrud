@@ -1,4 +1,4 @@
-# Simple Aplicación CRUD con Djando
+# Simple Aplicación CRUD con Django
 
 Una Simple Aplicación CRUD con Django y Mysql
 
