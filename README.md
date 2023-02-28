@@ -5,7 +5,7 @@ Una Simple Aplicación CRUD con Django y Mysql
 ## Pre-requisitos
 
 * Python 3
-* Servidor Mysql: Para el ejemplo se uso [laragon](https://laragon.org/download/index.html)
+* Servidor Mysql: Para el ejemplo se usó [laragon](https://laragon.org/download/index.html)
 
 ## Instalación
 
@@ -39,14 +39,14 @@ python manage.py runserver
 
 Ingresamos desde el navegador a la url [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin). 
 
-La primera vista que aparecera sera para agregar un nuevo usuario. Rellenamos el formulario y nos redimenciona a otra vista donde veremos todos los usuarios hasta el momento, en dicha vista  podemos buscar, actualizar y eliminar usuarios. Las busquedas de usuarios son filtradas netamente por el correo electrónico.
+La primera vista que aparecerá será para agregar un nuevo usuario. Rellenamos el formulario y nos redimensiona a otra vista donde veremos todos los usuarios hasta el momento, en dicha vista podemos buscar, actualizar y eliminar usuarios. Las búsquedas de usuarios son filtradas netamente por el correo electrónico.
 
 ## Panel de Administrador de usuario
 
-En django tambien podemos realizar operacione CRUD desde el panel de administrador como super usuario, para ello necesitamos crear un usuario nuevo con el comando
+En django también podemos realizar operaciones CRUD desde el panel de administrador como super usuario, para ello necesitamos crear un usuario nuevo con el comando
 ```
 python manage.py createsuperuser
 ```
-Nos pedira correo, nombre de usuario y una contraseña, por último tecleamos Y para continuar y presionamos enter.
+Nos pedirá correo, nombre de usuario y una contraseña, por último, tecleamos Y para continuar y presionamos enter.
 
 Ahora solo resta ingresar a la URL [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin) y accedemos con nuestras credenciales que acabamos de introducir
